@@ -1,0 +1,42 @@
+@use '../utils/' as *;
+
+.heading-1{
+   @include heading;
+}
+
+.heading-2{
+    @include heading;
+    font-size: 4rem;
+    font-style: italic;
+    &--light{color:var(--color-grey-light-1);}
+    &--dark{color:var(--color-grey-dark-1);}
+    line-height: 1;
+}
+.heading-3{
+    @include heading;
+    font-size: 1.6rem;
+    color: white;
+    //color: var(--color-primary);
+    text-transform: uppercase;
+}
+.heading-4{
+    @include heading;
+    font-size: 1.9rem;
+    &--light{color:var(--color-grey-light-1);}
+    &--dark{color:var(--color-grey-dark-1);}
+}
+
+.btn{
+    background-color: var(--color-primary);
+    color:white;
+    border: none;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2;
+    &:hover{
+        background-color: var(--color-primary-dark);
+    }
+}
